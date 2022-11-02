@@ -7,12 +7,22 @@ const toggleButton = document.querySelector('.toggle-read');
 
 let books = [];
 
-function Book(title, author, pages, isRead){
+/* function Book(title, author, pages, isRead){
     this.id = Math.floor(Math.random() * 100);
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.isRead = isRead;
+} */
+
+class Book{
+    constructor(title, author, pages, isRead){
+        this.id = Math.floor(Math.random() + 100);
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.isRead = isRead;
+    }
 }
 
 function updateUi(){
